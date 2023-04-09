@@ -17,6 +17,6 @@
 ---------------------------
 ###  Script
 
-#### https://raw.githubusercontent.com/IC58G/Q/master/Resource/Rewrite/QuantumultX/Rewrite/unlock-R.conf
+#### https://raw.githubusercontent.com/IC58G/Q/master/Resource/Rewrite/Unlock-R.conf
 
 ---------------------------
