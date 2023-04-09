@@ -1,0 +1,13 @@
+#!name = dev
+#!desc = 测试 调试
+#!openUrl = https://github.com/IC58G/Q/dev
+#!author = IC58G
+#!homepage = https://github.com/IC58G/Q/master/Resource/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Loon.png
+
+[Rewrite]
+
+[Script]
+
+[MITM]
+hostname = 
