@@ -8,6 +8,31 @@
 [Rewrite]
 
 [Script]
+http-response ^http[s]?:\/\/mobile-ios-wallpaper-api.zhhainiao.com\/v1\/user\/info script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yqzmbz.js, requires-body=true, timeout=60, tag=元气桌面壁纸
+
+http-response ^http[s]?:\/\/(getway|ytapi).radio.(cn|com)(/app[a-z0-9/]+|/ytsrv/srv/appUser/getUserInfoH5).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yunt.js, requires-body=true, timeout=60, tag=云听
+
+http-response ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/FD.js, requires-body=true, timeout=60, tag=樊登读书
+http-request ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/FDTK.js, requires-body=true, timeout=60, tag=樊登读书 2
+
+http-response ^https:\/\/api\.craft\.do\/auth\/v2\/profile script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/Craft.js, requires-body=true, timeout=60, tag=Craft
+
+http-response ^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/Picsart.js, requires-body=true, timeout=60, tag=Picsart
+
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/spotify.js, requires-body=true, timeout=60, tag=Spotify
+
+http-request ^http[s]?:\/\/.*zhihu\.(com|cn)\/(appview\/v2\/answer|sku\/reversion_sku_ext\?sku_id|remix-web\/paid_columns|km_player\/album|market\/paid_column|appview\/p|api\/v3\/books).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yxuan.js, timeout=60, tag=知乎
+http-response ^http[s]?:\/\/api\.zhihu\.com\/(people\/self|unlimited\/go\/my_card).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/zhihu.js, requires-body=true, timeout=60, tag=知乎 2
+
+http-response ^http[s]?:\/\/.+((retouchpics)|(faceu)|(ulikecam)).(com|cn|mobi)\/.+(user|\/v1\/homepage\/pro|ever_photo\/space_info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/XTJY.js, requires-body=true, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink
+http-request ^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/JY.js, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 2
+http-request ^http[s]?:\/\/commerce-api.faceu.mobi\/commerce\/v1\/subscription\/user_info.*total_memory.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/jxyq.js, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 3
+http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/mtxx.js, requires-body=true, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 4
+http-response ^http[s]?:\/\/api-((winkcut)|(sub))\.meitu\.com\/(user\/show|v2\/user\/vip_info_by_group).json script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wink.js, requires-body=true, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 5
+
+http-request ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))mobile-play.+$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/xmly.js, timeout=60, tag=喜马拉雅
+http-response ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))(product/info|/mobile-user/v2/homePage|/vip/v1/recommand/ts|mobile-playpage/playpage/tabs|/mobile-album/album/page/ts|mobile/v1/album/track/ts|product/promotion/v./whole/album/\d+/price/dynamic/ts|business-vip-presale-mobile-web/page/ts).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/ximalaya.js, requires-body=true, timeout=60, tag=喜马拉雅2
+
 http-response ^http[s]?:\/\/.+bilibili.+((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/BLBLHD1.js, requires-body=true, timeout=60, tag=哔哩哔哩HD
 
 http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wyun.js, timeout=60, tag=网易云音乐
