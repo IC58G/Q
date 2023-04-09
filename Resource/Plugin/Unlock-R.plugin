@@ -12,5 +12,36 @@ http-response ^http[s]?:\/\/.+bilibili.+((pgc\/player\/api\/playurl)|(x\/v2\/acc
 
 http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wyun.js, timeout=60, tag=网易云音乐
 
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/panda.js, requires-body=true, timeout=60, tag=百度网盘
+
+http-response ^http[s]?:\/\/.+keep.+(athena/v7/people/my|/ad/preload|details|preview|/start|liveStream/schedule|course/v3/plans|/home/prime/page).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/keep.js, requires-body=true, timeout=60, tag=Keep
+
+http-response ^http[s]?:\/\/gentlemanapp\.lingdu2019.cn\/ios_api\/(my_home\/my_detail|portrait\/goods_detail|publish\/yuepai_detail) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/shens.js, requires-body=true, timeout=60, tag=绅士
+
+http-response ^https:\/\/jiekou1\.shijiujin\.com\/Login\/info script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/69av.js, requires-body=true, timeout=60, tag= 69AV 🔞🚌 https://www.69av.live 206898(必填)
+
+http-response ^https:\/\/ppt.fuaybr.cn\/\/(Api|Milk)\/(getuserinfo|getstartup|getvideotop) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/Milk.js, requires-body=true, timeout=60, tag= Milk 🔞🚌 https://milk.odhkhke.cn mm815360(必填)
+
+http-request ^http[s]?:\/\/.+((ppapi)|(17gwl)|(sgyrc)|(mnghx)|(czbt)|(jtshuzhiwa)).(info|cc|com)\/m_sns\/(video\/apply_play_permission|film).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/91.js, timeout=60, tag= 91视频 🔞 🚌 https://h5.juvz.xyz
+
+http-request ^http[s]?:\/\/long.fuhuida.*\/(videos1|watch|static|upload|watch[0-9]+)\/.*\/.*\.m3u8\?auth_key.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/kuaishou.js, timeout=60, tag= 快手短视频 🔞 🚌 https://ksh3.ks005.co
+
+http-request ^http[s]:\/\/api\.wy.*.com\/m3u8\/.*.m3u8\?token.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/wydsp.js, timeout=60, tag= 无忧短视频 🔞🚌 https://wuyouh5.com/?verify=VOfiYjiNqb5NQFlnN7UrtH4kksNuESCYng0SdyNGHNwz92vKpMMqBA89gmxtr6so
+
+http-request ^http[s]?:\/\/api\.hx.*\.com\/api\/app\/vid\/h5\/m3u8.*\/.*m3u8\? script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/hxsp.js, timeout=60, tag= 红杏短视频 🔞🚌 http://hfhongx.com
+
+http-request ^http[s]?:\/\/tx[a-zA-Z0-9].+(com|cc|cn)\/h5\/system\/info.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/Tx.js, requires-body=true, timeout=60, tag= 糖心 🔞🚌 https://txh016.com
+
+http-request ^http[s]?:\/\/s400\.sssm\.info\/api\/videos\/.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/ssm.js, timeout=60, tag= 绳师SM 🔞🚌
+
+http-request ^http[s]?:\/\/h5\.zhihuav\.com\/api\/h5app\/media\/m3u8.+m3u8.+timestamp.+sign.+nonce.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/Kuaiyp.js, timeout=60, tag= 快手约炮 🔞🚌
+
+http-request ^http[s]?:\/\/.+antvapp.+\/api\/videos\/.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/antv.js, timeout=60, tag= AnTv 🔞🚌
+
+http-response ^http[s]?:\/\/.*\.liuniukeji\.(heshuangde|cdwksjx)\.com\/index\.php\/App\/(Account\/Login|User\/Info|Index\/Update).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/shzb.js, requires-body=true, timeout=60, tag=神户直播 🔞🚌
+http-request ^http[s]?:\/\/.*\.liuniukeji\.(heshuangde|cdwksjx)\.com\/index\.php\/App\/User\/Info.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/shtk.js, timeout=60, tag= 神户直播 🔞🚌 2
+
+http-request ^http[s]?:\/\/.+\/api(\/video\/report_item?|\/live\/room\/detail?|\/video\/related?|\/video\/detail|\/social\/posts_info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/baoyu.js, timeout=60, tag= 鲍鱼live 解锁限制 🔞🚌
+
 [MITM]
 hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, jiekou1.shijiujin.com, gentleman*, *keep*, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, mobile-ios-wallpaper-api.zhhainiao.com
