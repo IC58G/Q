@@ -1,17 +1,17 @@
 #!name = 解锁限制等(随时失效)
-#!desc = 黑科技 吧啦吧啦 最后更新时间：2023-04-09
+#!desc = 黑科技 最后更新时间：2023-04-09
 #!openUrl = https://github.com/IC58G/Q
 #!author = IC58G
 #!homepage = https://github.com/IC58G/Q/master/Resource/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Loon.png
 
 [MITM]
-hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, jiekou1.shijiujin.com, gentleman*, *keep*, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, mobile-ios-wallpaper-api.zhhainiao.com
+hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, mdapi.zhbt01.com, plxk.fhlium.com,xdk.coegcj.com,xuoa.vwymyr.com, jiekou1.shijiujin.com, *.silkangel.*, gentleman*, *keep*, 118.178.117.72,o2o.dailyyoga.com.cn, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, *.aoscdn.*
 
 [Rewrite]
 
 [Script]
-http-response ^http[s]?:\/\/mobile-ios-wallpaper-api.zhhainiao.com\/v1\/user\/info script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yqzmbz.js, requires-body=true, timeout=60, tag=元气桌面壁纸
+http-response ^https:\/\/awvp\.aoscdn\.com\/base\/vip\/v2\/vips$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ztkt.js, requires-body=true, timeout=60, tag=佐糖
 
 http-response ^http[s]?:\/\/(getway|ytapi).radio.(cn|com)(/app[a-z0-9/]+|/ytsrv/srv/appUser/getUserInfoH5).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yunt.js, requires-body=true, timeout=60, tag=云听
 
@@ -42,9 +42,17 @@ http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/searc
 
 http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/panda.js, requires-body=true, timeout=60, tag=百度网盘
 
+http-response ^http[s]?:\/\/((118.178.117.72)|(o2o.dailyyoga.com.cn))\/.*\/(user\/getmeinfo\?|course\/session\/detail|course\/program\/detail|user\/calendar\/date\/info|base\/clientconfig\/userguide) script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/mryj.js, requires-body=true, timeout=60, tag=每日瑜伽
+
 http-response ^http[s]?:\/\/.+keep.+(athena/v7/people/my|/ad/preload|details|preview|/start|liveStream/schedule|course/v3/plans|/home/prime/page).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/keep.js, requires-body=true, timeout=60, tag=Keep
 
+http-response ^https?://.*\.silkangel\.com/api/.*(/myinfo|/item/all)$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/silk.js, requires-body=true, timeout=60, tag=Silk
+
 http-response ^http[s]?:\/\/gentlemanapp\.lingdu2019.cn\/ios_api\/(my_home\/my_detail|portrait\/goods_detail|publish\/yuepai_detail) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/shens.js, requires-body=true, timeout=60, tag=绅士
+
+http-request ^http[s]?:\/\/(plxk\.fhlium|xdk\.coegcj|xuoa\.vwymyr)\.com\/api\/app\/vid\/h5\/m3u8\/.*.m3u8\?token\= script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/51bs.js, timeout=60, tag=51本色  🔞🚌 https://qd51sqsa.com
+
+http-response ^https:\/\/mdapi\.zhbt01\.com\/api\/video\/user\/info script-path=https://raw.githubusercontent.com/gjwj666/qx/main/Fctv.js, requires-body=true, timeout=60, tag=发财tv 🔞🚌 https://fctv111.com
 
 http-response ^https:\/\/jiekou1\.shijiujin\.com\/Login\/info script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/69av.js, requires-body=true, timeout=60, tag= 69AV 🔞🚌 https://www.69av.live 206898(必填)
 
@@ -69,4 +77,5 @@ http-request ^http[s]?:\/\/.+antvapp.+\/api\/videos\/.*$ script-path=https://raw
 http-response ^http[s]?:\/\/.*\.liuniukeji\.(heshuangde|cdwksjx)\.com\/index\.php\/App\/(Account\/Login|User\/Info|Index\/Update).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/shzb.js, requires-body=true, timeout=60, tag=神户直播 🔞🚌
 http-request ^http[s]?:\/\/.*\.liuniukeji\.(heshuangde|cdwksjx)\.com\/index\.php\/App\/User\/Info.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/shtk.js, timeout=60, tag= 神户直播 🔞🚌 2
 
-http-request ^http[s]?:\/\/.+\/api(\/video\/report_item?|\/live\/room\/detail?|\/video\/related?|\/video\/detail|\/social\/posts_info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/baoyu.js, timeout=60, tag= 鲍鱼live 解锁限制 🔞🚌
+
+http-request ^http[s]?:\/\/.+\/api(\/video\/report_item?|\/live\/room\/detail?|\/video\/related?|\/video\/detail|\/social\/posts_info).*$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/baoyu.js, timeout=60, tag=鲍鱼live 解锁限制 🔞🚌
