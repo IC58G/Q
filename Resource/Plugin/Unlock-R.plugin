@@ -5,6 +5,9 @@
 #!homepage = https://github.com/IC58G/Q/master/Resource/Plugin
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Loon.png
 
+[MITM]
+hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, jiekou1.shijiujin.com, gentleman*, *keep*, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, mobile-ios-wallpaper-api.zhhainiao.com
+
 [Rewrite]
 
 [Script]
@@ -67,6 +70,3 @@ http-response ^http[s]?:\/\/.*\.liuniukeji\.(heshuangde|cdwksjx)\.com\/index\.ph
 http-request ^http[s]?:\/\/.*\.liuniukeji\.(heshuangde|cdwksjx)\.com\/index\.php\/App\/User\/Info.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/shtk.js, timeout=60, tag= 神户直播 🔞🚌 2
 
 http-request ^http[s]?:\/\/.+\/api(\/video\/report_item?|\/live\/room\/detail?|\/video\/related?|\/video\/detail|\/social\/posts_info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/p/baoyu.js, timeout=60, tag= 鲍鱼live 解锁限制 🔞🚌
-
-[MITM]
-hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, jiekou1.shijiujin.com, gentleman*, *keep*, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, mobile-ios-wallpaper-api.zhhainiao.com
