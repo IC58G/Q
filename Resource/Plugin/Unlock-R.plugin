@@ -8,8 +8,7 @@
 [Rewrite]
 
 [Script]
-http-response ^http[s]?:\/\/.+bilibili.+((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/BLBLHD1.js,tag=哔哩哔哩HD
-
+http-response ^http[s]?:\/\/.+bilibili.+((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/BLBLHD1.js, requires-body=true, timeout=60, tag=哔哩哔哩HD
 http-request \/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/)= script-path =
 http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wyun.js, tag=网易云音乐
 
