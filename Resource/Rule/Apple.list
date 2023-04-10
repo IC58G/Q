@@ -1,10 +1,10 @@
 # Block iOS Update
-# DOMAIN,mesu.apple.com,广告屏蔽
-# DOMAIN,gdmf.apple.com,广告屏蔽
-# DOMAIN,updates-http.cdn-apple.com,广告屏蔽
-# DOMAIN,xp.apple.com,广告屏蔽
-# DOMAIN,ns.itunes.apple.com,广告屏蔽
-# DOMAIN,appldnld.apple.com,广告屏蔽
+# DOMAIN,mesu.apple.com
+# DOMAIN,gdmf.apple.com
+# DOMAIN,updates-http.cdn-apple.com
+# DOMAIN,xp.apple.com
+# DOMAIN,ns.itunes.apple.com
+# DOMAIN,appldnld.apple.com
 
 # Software Update
 # > macOS updates
