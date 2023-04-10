@@ -8,7 +8,7 @@ HOST,d.image.i4.cn
 IP-CIDR,203.107.1.1/24
 
 
-# 屏蔽系统更新
+# Block iOS Update
 host, ns.itunes.apple.com
 host, appldnld.apple.com
 host, mesu.apple.com
