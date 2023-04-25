@@ -1,14 +1,13 @@
-HOST,api.biliapi.com
-HOST,api.biliapi.net
-HOST,api.bilibili.com
-HOST,app.biliapi.com
-HOST,app.biliapi.net
-HOST,app.bilibili.com
-HOST,grpc.biliapi.net
-HOST,m.bilibili.com
-HOST,upos-hz-mirrorakam.akamaized.net
-HOST,www.bilibili.com
-HOST-KEYWORD,cn-hk-eq-bcache-
+DOMAIN-SUFFIX,api.biliapi.com
+DOMAIN-SUFFIX,api.biliapi.net
+DOMAIN-SUFFIX,api.bilibili.com
+DOMAIN-SUFFIX,app.biliapi.com
+DOMAIN-SUFFIX,app.biliapi.net
+DOMAIN-SUFFIX,app.bilibili.com
+DOMAIN-SUFFIX,grpc.biliapi.net
+DOMAIN-SUFFIX,m.bilibili.com
+DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
+DOMAIN-SUFFIX,www.bilibili.com
 IP-CIDR,121.11.192.0/24
 
 DOMAIN-SUFFIX,iq.com
