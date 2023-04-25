@@ -1,13 +1,13 @@
-DOMAIN-SUFFIX,api.biliapi.com
-DOMAIN-SUFFIX,api.biliapi.net
-DOMAIN-SUFFIX,api.bilibili.com
-DOMAIN-SUFFIX,app.biliapi.com
-DOMAIN-SUFFIX,app.biliapi.net
-DOMAIN-SUFFIX,app.bilibili.com
-DOMAIN-SUFFIX,grpc.biliapi.net
-DOMAIN-SUFFIX,m.bilibili.com
-DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
-DOMAIN-SUFFIX,www.bilibili.com
+DOMAIN-KEYWORD,api.biliapi.com
+DOMAIN-KEYWORD,api.biliapi.net
+DOMAIN-KEYWORD,api.bilibili.com
+DOMAIN-KEYWORD,app.biliapi.com
+DOMAIN-KEYWORD,app.biliapi.net
+DOMAIN-KEYWORD,app.bilibili.com
+DOMAIN-KEYWORD,grpc.biliapi.net
+DOMAIN-KEYWORD,m.bilibili.com
+DOMAIN-KEYWORD,upos-hz-mirrorakam.akamaized.net
+DOMAIN-KEYWORD,www.bilibili.com
 IP-CIDR,121.11.192.0/24
 
 DOMAIN-SUFFIX,iq.com
@@ -16,17 +16,6 @@ DOMAIN,cache-video.iq.com
 DOMAIN,intl.iqiyi.com
 DOMAIN,intl-rcd.iqiyi.com
 DOMAIN,intl-subscription.iqiyi.com
-
-DOMAIN,akmcdnoversea-tw.inter.iqiyi.com
-DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
-DOMAIN,chuangcachecdnoversea-tw.inter.iqiyi.com
-DOMAIN,chuangcachecdnoversea-tw.inter.ptqy.gitv.tv
-IP-CIDR,103.44.56.0/22
-IP-CIDR,118.26.32.0/23
-IP-CIDR,118.26.120.0/24
-IP-CIDR,223.119.62.225/28
-IP-CIDR,23.40.242.10/32
-IP-CIDR,23.40.241.251/32
 
 DOMAIN-SUFFIX,api.mgtv.com
 
