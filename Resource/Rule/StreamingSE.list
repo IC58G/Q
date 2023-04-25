@@ -1,4 +1,3 @@
-# Bilibili 哔哩哔哩 港澳台番剧
 HOST,api.biliapi.com
 HOST,api.biliapi.net
 HOST,api.bilibili.com
@@ -11,14 +10,14 @@ HOST,upos-hz-mirrorakam.akamaized.net
 HOST,www.bilibili.com
 HOST-KEYWORD,cn-hk-eq-bcache-
 IP-CIDR,121.11.192.0/24
-# 爱奇艺台湾站
+
 DOMAIN-SUFFIX,iq.com
 DOMAIN,cache.video.iqiyi.com
 DOMAIN,cache-video.iq.com
 DOMAIN,intl.iqiyi.com
 DOMAIN,intl-rcd.iqiyi.com
 DOMAIN,intl-subscription.iqiyi.com
-# 流媒体内容，非必须，省流量可注释
+
 DOMAIN,akmcdnoversea-tw.inter.iqiyi.com
 DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
 DOMAIN,chuangcachecdnoversea-tw.inter.iqiyi.com
@@ -29,8 +28,8 @@ IP-CIDR,118.26.120.0/24
 IP-CIDR,223.119.62.225/28
 IP-CIDR,23.40.242.10/32
 IP-CIDR,23.40.241.251/32
-# 芒果TV国际
+
 DOMAIN-SUFFIX,api.mgtv.com
-# WeTV
+
 DOMAIN-SUFFIX,wetv.vip
 DOMAIN-SUFFIX,wetvinfo.com
