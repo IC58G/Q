@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Loon.png
 
 [MITM]
-hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, mdapi.zhbt01.com, plxk.fhlium.com,xdk.coegcj.com,xuoa.vwymyr.com, jiekou1.shijiujin.com, *.silkangel.*, gentleman*, *keep*, 118.178.117.72,o2o.dailyyoga.com.cn, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, *.aoscdn.*
+hostname = 42.157.*.*, *cdwksjx*,*heshuangde*,gitee.com, *antv*, api.hx*.com, *sssm*, tx*.com, *zhihuav*, api.wy*.com, *fuhuida*, *17gwl*,appapi*,*sgyrc*,*mnghx*,*czbt*,*jtshuzhiwa*,mnghx,czbt, *fuaybr*, mdapi.zhbt01.com, plxk.fhlium.com,xdk.coegcj.com,xuoa.vwymyr.com, jiekou1.shijiujin.com, *.silkangel.*, gentleman*, *keep*, 118.178.117.72,o2o.dailyyoga.com.cn, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, *.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, *.aoscdn.*
 
 [Rewrite]
 
