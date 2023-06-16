@@ -16,6 +16,6 @@ hostname = app.bilibili.com
 ******************************************/
 let body = JSON.parse($response.body);
 
-!body.data.vip.status && (body.data.vip.type = 2, body.data.vip.status = 1, body.data.vip.vip_pay_type = 1, body.data.vip.due_date = 4070880061000);
+!body.data.vip.status && (body.data.vip.type = 2, body.data.vip.status = 1, body.data.vip.vip_pay_type = 1, body.data.vip.due_date = 4070880000000);
 
 $done({ body: JSON.stringify(body) });
