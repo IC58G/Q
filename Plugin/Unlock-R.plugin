@@ -6,46 +6,64 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Loon.png
 
 [MITM]
-hostname =*keep*, 118.178.117.72,o2o.dailyyoga.com.cn, pan.baidu.com, *music*, *.biliapi.*,*.bilibili.*, 180.153.*.*,*xima*,*xmcdn*, *faceu*,*retouchpics*,*.ulikecam.com,*.xiuxiu.meitu.com*,meitu*, 125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,103.41.167*,150.109.91*,*.zhihu.*, spclient.wg.spotify.com, api.meiease.*, api.craft.do, *dushu*, *.radio.*, *.aoscdn.*, aiqicha.baidu.com, vas.wps.cn, account.wps.cn
-
+hostname = api.gotokeep.com, *kuwo*,*lrts*, bd-api.kuwo.cn, *.music.163.com, spclient.wg.spotify.com, *.mgtv.com, app.bilibili.com, *.caiyunapp.*,*cyapi*, *.caiyunapp.*,*cyapi* api.craft.do, 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,180.153.140.*,180.153.250.*,114.80.99.*,114.80.139.237,114.80.161.29,1.62.62.64,51*.com, *.radio.*, 116.136.170*,116.136.15*,123.138.13*,123.138.13*,125.72.138*,116.177.244*,221.178.19.*,218.201.95*,117.187.144*,112.19.1*,58.216.107*,58.221.31*,61.243.13*,58.144.248*,120.92.107*,125.77.176*,27.148*,183.204*,122.224*,60.188.72*,120.220*,120.222*,150.109.91*,*zhihu*,103.41.167*,112.194.67*,119.39.203*,101.207.252*,58.223.164*,27.152.187*,157.255.135*,124.227.186*,113.16.214*,113.96.150*,113.96.181*, *qmxfs*, *dushu*, *.mting.*,m.lrts.me,hapi.mting.info, api2.mubu.com, gentlemanapp*, iosv2.cjapi.papa21.com,*wufan*, *.weread.qq.com, *.aliyundrive.com, *ubestkid*, *qidian.com, appwk.baidu.com, pan.baidu.com
 [Rewrite]
 
 [Script]
-http-response ^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) script-path=https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js, requires-body=true, tag=WPS
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/panda.js, requires-body=true, timeout=60, tag=百度网盘
 
-http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, requires-body=true, timeout=10, tag=爱企查
+http-response ^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/o/bdwk.js, requires-body=true, timeout=60, tag=百度文库
 
-http-response ^https:\/\/awvp\.aoscdn\.com\/base\/vip\/v2\/vips$ script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ztkt.js, requires-body=true, timeout=60, tag=佐糖
+http-response ^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v(3|2|4)\/(user\/getaccountpage\?gender|client\/getsplashscreen\?localLabels|subscription\/getunboughtchapterlist).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/QDVIP.js, requires-body=true, timeout=60, tag=起点读书
+http-request ^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v(2|4)\/(subscription\/getvipprice|bookcontent\/getvipcontent|.*safegetcontent\?bookId\=[0-9]+&) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/QDTK.js, timeout=60, tag=起点读书
 
-http-response ^http[s]?:\/\/(getway|ytapi).radio.(cn|com)(/app[a-z0-9/]+|/ytsrv/srv/appUser/getUserInfoH5).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yunt.js, requires-body=true, timeout=60, tag=云听
+http-response ^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/llsyd.js, requires-body=true, timeout=60, tag=流利说
+
+http-response ^http[s]?:\/\/.*ubestkid.*(getUserProfile|course|api/v1/featureV2|xtapi/zhuanlan|/api/v1/bv/videoV2).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/beile.js, requires-body=true, timeout=60, tag=贝乐虎启蒙
+
+http-response ^https?:\/\/(api|member)\.aliyundrive\.com script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/aliy.js, requires-body=true, timeout=60, tag=阿里云盘
+
+http-response ^http[s]?:\/\/(i|res)\.weread\.qq.com\/(login|pay\/balance|book\/chapterInfos|user\?userVid\=|upload\?type\=avatar).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wxds.js, requires-body=true, timeout=60, tag=微信读书
+
+http-response ^http[s]?:\/\/.+user/ios_store_pay_edition.+(check_members_identity_v2|get_member_info) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wufan.js, requires-body=true, timeout=60, tag=悟饭
+
+http-response ^http[s]?:\/\/gentlemanapp\.lingdu2019.cn\/ios_api\/(my_home\/my_detail|portrait\/goods_detail|publish\/yuepai_detail) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/shens.js, requires-body=true, timeout=60, tag=绅士
+
+http-response ^https:\/\/api2.mubu.com\/v3\/api\/user/* script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/mubu.js, requires-body=true, timeout=60, tag=幕布
+
+http-response ^http[s]?:\/\/((shapi|hapi)(\.mting\.info)|(m\.lrts\.me)|(gzapi\.mting\.info))\/(app|yyting)\/(getVipPageData|userclient\/ClientGetUserInfo|usercenter\/ThirdPartyLogin).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/LanRen.js, requires-body=true, timeout=60, tag=懒人听书
 
 http-response ^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/FD.js, requires-body=true, timeout=60, tag=樊登读书
-http-request ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/FDTK.js, requires-body=true, timeout=60, tag=樊登读书 2
+http-request ^http[s]?:\/\/.+dushu.+(v101\/content|book\/v100\/info|\/play\/duration|\/v100\/index|lilei-talk-orch\/program\/v100\/info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/FDTK.js, requires-body=true, timeout=60, tag=樊登读书
+
+http-response ^http[s]?:\/\/api\.qmxfs\.com\/v003/user\/queryAccountInfo\.json script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/qmxfs.js, requires-body=true, timeout=60, tag=全民幸福社
+http-request ^http[s]?:\/\/api\.qmxfs\.com\/v003\/subject\/subjectDetail\.json script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/qmxfstk.js, requires-body=true, timeout=60, tag= 全民幸福社
+
+http-response ^http[s]?:\/\/api\.zhihu\.com\/(people\/self|unlimited\/go\/my_card|sku\/reversion_sku_ext).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/ZHVIP.js, requires-body=true, timeout=60, tag=知乎
+http-request http[s]?:\/\/.*zhihu\.(com|cn)\/(appview\/v2\/answer|remix-web\/paid_columns.*manuscript|market\/paid_column|appview\/p|api\/v3\/books|books|market\/paid_magazine).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/ZHTK.js, timeout=60, tag=知乎
+
+http-response http[s]?:\/\/(getway|ytmsout|ytapi).radio.*(/app|/ytsrv/srv/appUser/getUserInfoH5).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yunt.js, requires-body=true, timeout=60, tag=云听
+
+http-request ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))\/mobile-playpage\/track\/v3\/baseInfo\/ts script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/xmty1.js, timeout=60, tag=喜马拉雅
+http-response ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)).*\/(playpage\/tabs\/v2|v1\/album\/track\/ts|v1\/album\/price|v2\/homePage|business-vip-presale-mobile-web\/page\/ts|vip\/v1\/recommand|track\/v3\/baseInfo|v1\/module\/data\/dynamic|basicInfo\/dynamic\/ts).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/XMVIPTY.js, requires-body=true, timeout=60, tag=喜马拉雅
 
 http-response ^https:\/\/api\.craft\.do\/auth\/v2\/profile script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/Craft.js, requires-body=true, timeout=60, tag=Craft
 
-http-response ^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/Picsart.js, requires-body=true, timeout=60, tag=Picsart
+http-response ^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/caiyun.js, requires-body=true, timeout=60, tag=彩云天气
 
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/spotify.js, requires-body=true, timeout=60, tag=Spotify
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/blbl.js, requires-body=true, timeout=60, tag=哔哩哔哩
 
-http-request ^http[s]?:\/\/.*zhihu\.(com|cn)\/(appview\/v2\/answer|sku\/reversion_sku_ext\?sku_id|remix-web\/paid_columns|km_player\/album|market\/paid_column|appview\/p|api\/v3\/books).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/yxuan.js, timeout=60, tag=知乎
-http-response ^http[s]?:\/\/api\.zhihu\.com\/(people\/self|unlimited\/go\/my_card).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/zhihu.js, requires-body=true, timeout=60, tag=知乎 2
+http-response ^http[s]?:\/\/.*mgtv\.com/(client\/dynamic_entry|v8\/video\/getSource|GetUserInfo|v3\/module\/list|credits\/url).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/MGTV.js, requires-body=true, timeout=60, tag=芒果TV
+http-response ^http[s]?:\/\/.*mgtv\.com/(client\/dynamic_entry|v8\/video\/getSource|GetUserInfo|v3\/module\/list|credits\/url).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/MGTV.js, requires-body=true, timeout=60, tag=芒果TV
 
-http-response ^http[s]?:\/\/.+((retouchpics)|(faceu)|(ulikecam)).(com|cn|mobi)\/.+(user|\/v1\/homepage\/pro|ever_photo\/space_info).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/XTJY.js, requires-body=true, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink
-http-request ^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/JY.js, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 2
-http-request ^http[s]?:\/\/commerce-api.faceu.mobi\/commerce\/v1\/subscription\/user_info.*total_memory.*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/jxyq.js, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 3
-http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/mtxx.js, requires-body=true, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 4
-http-response ^http[s]?:\/\/api-((winkcut)|(sub))\.meitu\.com\/(user\/show|v2\/user\/vip_info_by_group).json script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wink.js, requires-body=true, timeout=60, tag= 轻颜相机&醒图&剪映&美图秀秀&wink 5
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=Spotify
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/spotify-json.js, timeout=60, tag=Spotify
 
-http-request ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))mobile-play.+$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/xmly.js, timeout=60, tag=喜马拉雅
-http-response ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))(product/info|/mobile-user/v2/homePage|/vip/v1/recommand/ts|mobile-playpage/playpage/tabs|/mobile-album/album/page/ts|mobile/v1/album/track/ts|product/promotion/v./whole/album/\d+/price/dynamic/ts|business-vip-presale-mobile-web/page/ts).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/ximalaya.js, requires-body=true, timeout=60, tag=喜马拉雅2
+http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wyun.js, timeout=60, tag=网易云音乐
 
-http-response ^http[s]?:\/\/.+bilibili.+((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/BLBLHD1.js, requires-body=true, timeout=60, tag=哔哩哔哩HD
+http-response ^http[s]:\/\/(.*.kuwo.cn) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/bdyy.js, requires-body=true, timeout=60, tag=波点音乐
 
-http-request ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/wyun.js, tag=网易云音乐
+http-response ^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ne|\/a\.p|v\d\/api\/(user\/in|pay\/vi)|\w{3}\/v\d\/user\/vi|\w{3}\/spi\/ms|\w{3}\/v\d\/the|\w{3}\/enc\/use) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
+http-request ^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ui) script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/kuwo.js, timeout=60, tag=酷我音乐
 
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/panda.js, requires-body=true, timeout=60, tag=百度网盘
-
-http-response ^http[s]?:\/\/((118.178.117.72)|(o2o.dailyyoga.com.cn))\/.*\/(user\/getmeinfo\?|course\/session\/detail|course\/program\/detail|user\/calendar\/date\/info|base\/clientconfig\/userguide) script-path=https://raw.githubusercontent.com/WeiRen0/Scripts/main/mryj.js, requires-body=true, timeout=60, tag=每日瑜伽
-
-http-response ^http[s]?:\/\/.+keep.+(athena/v7/people/my|/ad/preload|details|preview|/start|liveStream/schedule|course/v3/plans|/home/prime/page).*$ script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/keep.js, requires-body=true, timeout=60, tag=Keep
+http-response ^https:\/\/api\.gotokeep\.com script-path=https://raw.githubusercontent.com/IC58G/Q/master/Resource/Script/a/keep.js, requires-body=true, timeout=60, tag=keep
