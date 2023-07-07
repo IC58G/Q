@@ -4,7 +4,7 @@
 
 ## Loon (推荐)
 
-### https://raw.githubusercontent.com/IC58G/Q/master/Tool/Loon/Config/Loon_202305-cn.conf
+### https://raw.githubusercontent.com/IC58G/Q/master/Tool/Loon/Config/Loon_202307-cn.conf
 
 ### Surge（MAC）
 
